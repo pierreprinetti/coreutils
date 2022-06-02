@@ -77,6 +77,7 @@ static struct option const long_options[] =
   {"decode", no_argument, 0, 'd'},
   {"wrap", required_argument, 0, 'w'},
   {"ignore-garbage", no_argument, 0, 'i'},
+  {"no-trailing-eol", no_argument, 0, 'n'},
 #if BASE_TYPE == 42
   {"base64",    no_argument, 0, BASE64_OPTION},
   {"base64url", no_argument, 0, BASE64URL_OPTION},
@@ -141,6 +142,7 @@ Base%d encode or decode FILE, or standard input, to standard output.\n\
       fputs (_("\
   -d, --decode          decode data\n\
   -i, --ignore-garbage  when decoding, ignore non-alphabet characters\n\
+  -n, --no-trailing-eol when encoding, do not output the trailing newline\n\
   -w, --wrap=COLS       wrap encoded lines after COLS character (default 76).\n\
                           Use 0 to disable line wrapping\n\
 "), stdout);
